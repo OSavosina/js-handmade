@@ -16,13 +16,14 @@ img{border:none;}
 	height:auto !important;
 	height:100%;
 	min-height:100%;
-	position:relative;
+	position:static;
 	display:block;
+	background:#eeeeee;
 }
 
 	.framework  h3{
 		font-size:150%;
-		color:#000000;
+		color:red;
 	}
 
 
