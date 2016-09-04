@@ -40,8 +40,7 @@
 					maxzin = size+ 1,
 					rootHeight = root.children('ul').height(),
 					fhTabItem = itemFirst.height(),
-					rootPadding = root.css('padding-left'),
-					item;
+					rootPadding = root.css('padding-left');
 
 
 				root.height(fhTabItem + ulFirstHeight);
