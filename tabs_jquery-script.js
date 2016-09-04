@@ -21,7 +21,7 @@
 			var o = $.extend({
 				attabitem: 0, //значение при добавлении id к div
 				attabs: 0, //значение при добавлении id к ul li
-				direction:'left', //принимает значение left и right
+				direction:'right', //принимает значение left и right
 				duration: 'fast', //принимает значение slow, normal, fast или число
 				backgroundColor:''
 
@@ -76,7 +76,11 @@
 				ulFirstLi.click(function(){
 
 					var tabID = parseInt($(this).attr('id').match(/\d+/)[0]),
-						bHasClass = $(this).hasClass('tab-active');
+						bHasClass = $(this).hasClass('tab-active'),
+						tabItem = $('#tabItem'+tabID),
+						tabitemH = tabItem.height();
+
+					root.height(tabitemH + rootHeight);
 
 					items.each(function(){
 
@@ -96,32 +100,16 @@
 
 					});
 
+					tabItem.css({'z-index':maxzin}).animate({
+					 	left: rootPadding
+					}, o.duration);
+
 					ulFirstLi.removeClass('tab-active');
 					$(this).addClass('tab-active');
 
-
-					if(o.direction == 'left' && bHasClass == false){
-						$('#tabItem'+tabID).css({'z-index':maxzin}).animate({
-							left: rootPadding
-						}, o.duration);
-
-					}
-
-					if(o.direction == 'right' && bHasClass == false){
-						$('#tabItem'+tabID).css({'z-index':maxzin}).animate({
-							left: rootPadding
-						}, o.duration);
-
-					}
-
-					var htabitem = $('#tabItem'+tabID).height();
-					root.height(htabitem + rootHeight);
-
 				});
 
-
 			};
-
 
 			return this.each(make);
 
