@@ -31,14 +31,14 @@
 
 				var root = $(this),
 					dataName = root.data('name'),
-					ulFirst = $('ul', root),
-					ulFirstLi = $('li', ulFirst ),
-					items = $('.tabs-text', root),
+					ulFirst = $('.tabs__ul', root),
+					ulFirstLi = $('.tabs__li', ulFirst ),
+					items = $('.tabs__text', root),
 					itemFirst = items.eq(0),
 					ulFirstHeight = ulFirst.height(),
 					size = ulFirstLi.size(),
 					maxzin = size+ 1,
-					rootHeight = root.children('ul').height(),
+					rootHeight = ulFirst.height(),
 					fhTabItem = itemFirst.height(),
 					rootPadding = root.css('padding-left');
 
