@@ -116,7 +116,6 @@
 
 					var htabitem = $('#tabItem'+tabID).height();
 					root.height(htabitem + rootHeight);
-					console.log(rootHeight);
 
 				});
 
