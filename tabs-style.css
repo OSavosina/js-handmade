@@ -1,0 +1,109 @@
+* {margin: 0; padding: 0;}
+header, nav, section, article, aside, footer, main, audio {display:block; position:relative; margin:0; padding:0; border:none;}
+html, body {width:100%;height:100%;margin:0;}
+body {font-family:Tahoma, Helvetica, Trebuchet MS; font-size:14px;background:#f7f4ef;
+margin:0; padding:0;border:0;}
+a:hover {text-decoration:none}
+abbr {border-bottom:1px dotted #000000;cursor:help}
+h3, h4, h5, h6 {color:#000000}
+ul, li {list-style:none; padding:0;}
+ol {list-style-position:inside}
+table {border-spacing: 0;}
+img{border:none;}
+
+
+.main-wrapper {
+	height:auto !important;
+	height:100%;
+	min-height:100%;
+	position:relative;
+}
+
+	h3{
+		font-size:150%;
+		color:#000000;
+	}
+
+
+	.header-wrapper{
+		width:100%;
+		height:100px;
+		background:#1f1d19;
+	}
+	.content-wrapper{
+		width:1260px;
+		min-height:100%;
+		overflow:hidden;
+		padding:20px;
+		margin:0 auto;
+	}
+
+
+	/* =================== TABS ==================== */
+
+	.tabs-wrapper{
+		display:inline-block;
+		overflow:hidden;
+		margin:50px auto;
+		padding:15px;
+		border:1px solid #dddddd;
+		position:relative;
+		border-radius:3px;
+	}
+	.tabs__ul{
+		overflow:hidden;
+	}
+		.tabs__li{
+			width:170px;
+			overflow:hidden;
+			padding:10px;
+			border-radius:5px;
+			border:1px solid #888888;
+			margin-bottom:20px;
+			margin-right:8px;
+			color:#888888;
+			float:left;
+			text-align:center;
+		}
+		.tabs__li.tab-active{
+			background:#d1d1d1;
+			color:#ffffff;
+		}
+		.tabs__li:last-child{
+			margin-right:0;
+		}
+		.tabs__li:hover{
+			cursor:pointer;
+		}
+
+	.tabs__text{
+		width:592px;
+		position:absolute;
+		overflow:hidden;
+		left:-100%;
+	}
+	.tabs__text:last-child{
+		margin-right:0;
+	}
+	.tabs__text:hover{
+		cursor:pointer;
+	}
+
+
+/* ================ //TABS ================= */
+
+.common-spacer {
+	min-height:100px;
+	background:#f7f4ef;
+}
+.footer{
+	min-height:100px;
+	margin-top:-100px;
+	position:relative;
+	background:#58534c;
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }			
+		
