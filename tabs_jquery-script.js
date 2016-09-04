@@ -21,7 +21,7 @@
 			var o = $.extend({
 				attabitem: 0, //значение при добавлении id к div
 				attabs: 0, //значение при добавлении id к ul li
-				direction:'right', //принимает значение left и right
+				direction:'left', //принимает значение left и right
 				duration: 'fast', //принимает значение slow, normal, fast или число
 				backgroundColor:''
 
@@ -34,7 +34,7 @@
 					ulFirst = $('ul', root),
 					ulFirstLi = $('li', ulFirst ),
 					items = $('.tabs-text', root),
-					itemFirst = $('.tabs-text:first-child', root),
+					itemFirst = items.eq(0),
 					ulFirstHeight = ulFirst.height(),
 					size = ulFirstLi.size(),
 					maxzin = size+ 1,
@@ -44,7 +44,6 @@
 					item;
 
 
-				itemFirst.css({'left':rootPadding});
 				root.height(fhTabItem + ulFirstHeight);
 
 				ulFirstLi.each(function(){
@@ -59,12 +58,12 @@
 
 					if(o.direction == 'left'){
 						items.css({'left':'-100%'});
-						itemFirst.css({'left':rootPadding});
+						itemFirst.css({'left':'15px'});
 					}
 
 					if(o.direction == 'right'){
 						items.css({'left':'100%'});
-						itemFirst.css({'left':rootPadding});
+						itemFirst.css({'left':'15px'});
 					}
 
 					o.attabitem++
@@ -76,7 +75,7 @@
 
 
 				ulFirstLi.click(function(){
-				
+
 					var tabID = parseInt($(this).attr('id').match(/\d+/)[0]),
 						bHasClass = $(this).hasClass('tab-active');
 
