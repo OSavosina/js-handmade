@@ -1,4 +1,4 @@
 # js-handmade
 
 Tabs:
-http://porta-foglio.ru/projects/tabs/index.html
+http://savosina.ru/projects/tabs/index.html
